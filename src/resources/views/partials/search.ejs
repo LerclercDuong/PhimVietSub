@@ -1,0 +1,71 @@
+  
+  <h2 class="movies">--> Kết quả tìm kiếm: <%= searchresult %> </h2>
+<div class="movies-grid movies layouts">
+  
+  <% for (let i = 0; i < result.length; i++) { %>
+      <a href="/watch/<%= result[i].slug %>/?ep=1">
+        <div class="movie-card">
+    
+            <div class="card-head">
+              <% if (typeof thumbnail[i] == 'object' && thumbnail[i]) { %>
+                <img src="https://image.tmdb.org/t/p/original/<%= thumbnail[i].poster_path %>" alt="" class="card-img"  >
+                <% } else { %>
+                  <img src="<%= result[i].thumb_url %>" alt="" class="card-img"  >
+                  <% } %>
+    
+              <div class="card-overlay">
+    
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+    
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>6.4</span>
+                </div>
+    
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+    
+              </div>
+            </div>
+    
+            <div class="card-body">
+              <h3 class="card-title"><%= result[i].name %></h3>
+    
+              <div class="card-info">
+                <span class="genre">Action/Comedy</span>
+                <span class="year"><%= result[i].year %></span>
+              </div>
+            </div>
+    
+          </div>
+      </a>  
+    
+           <% } %>
+    
+              
+    
+              
+    
+            
+    
+            </div>
+
+            <style>
+              .tit{ top: 120px;}
+ @media screen and (max-width: 1200px) {
+        .movies{
+          margin-top:120px;
+        }
+      }
+
+            </style>
+            <script src="./assets/js/main.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

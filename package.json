@@ -1,0 +1,23 @@
+{
+  "name": "itverses",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bcrypt": "^5.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-ejs-layouts": "^2.5.1",
+    "mongoose": "^6.6.0",
+    "moviedb": "^0.2.12",
+    "moviedb-promise": "^3.2.0",
+    "nodemon": "^2.0.19"
+  }
+}

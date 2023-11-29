@@ -1,0 +1,228 @@
+
+     <!--
+    - main container
+  -->
+ 
+
+
+
+
+
+    <!--
+      - MAIN SECTION
+    -->
+    <main>
+
+      <!--
+        - #BANNER SECTION
+      -->
+      <section class="banner">
+        <a href="/watch/<%= thumb.slug %>?ep=1">
+       
+        <div class="banner-card">
+
+          <img src=<%= thumb.poster_url %> class="banner-img" alt="">
+
+          <div class="card-content">
+            <div class="card-info">
+
+              <div class="genre">
+                <ion-icon name="film"></ion-icon>
+                <span>Action/Thriller</span>
+              </div>
+
+              <div class="year">
+                <ion-icon name="calendar"></ion-icon>
+                <span><%= thumb.year%></span>
+              </div>
+
+              <div class="duration">
+                <ion-icon name="time"></ion-icon>
+                <span>2h 11m</span>
+              </div>
+
+              <div class="quality">4K</div>
+
+            </div>
+
+            <h2 class="card-title"><%= thumb.name %></h2>
+          </div>
+
+        </div>
+       </a>
+      </section>
+
+
+
+
+
+      <!--
+        - #MOVIES SECTION
+      -->
+      <section class="movies">
+
+        <!--
+          - filter bar
+        -->
+       
+
+          
+ 
+        <div class="filter-bar">
+
+          <div class="filter-dropdowns">
+            <select name="genre" class="genre">
+              <option value="all genres">Tất cả thể loại</option>
+              <option value="action">Action</option>
+              <option value="adventure">Adventure</option>
+              <option value="animal">Animal</option>
+              <option value="animation">Animation</option>
+              <option value="biography">Biography</option>
+            </select>
+
+            <!-- <select name="year" class="year">
+              <option value="all years">Năm</option>
+              <option value="2022">2022</option>
+              <option value="2020-2021">2020-2021</option>
+              <option value="2010-2019">2010-2019</option>
+              <option value="2000-2009">2000-2009</option>
+              <option value="1980-1999">1980-1999</option>
+            </select> -->
+
+          </div>
+
+          <div class="filter-radios" >
+
+            <input type="radio" name="grade" id="featured" checked>
+            <label for="featured">Chiếu rạp</label>
+
+            <input type="radio" name="grade" id="popular">
+            <label for="popular">Phim bộ</label>
+
+            <input type="radio" name="grade" id="newest">
+            <label for="newest">Phim lẻ</label>
+
+            <div class="checked-radio-bg"></div>
+
+          </div>
+
+        </div>
+        <!--
+          - movies grid
+        -->
+<!-- <% thumbnail.forEach(function(data) { %>
+  <% if (typeof data == 'object' && data) { %>
+    <img src="https://image.tmdb.org/t/p/original/<%= data.poster_path %>" alt="" class="card-img"  >
+    <% } %>
+    
+  <% }) %> -->
+
+        <div class="movies-grid">
+          
+  <% for (let i = 0; i < top.length; i++) { %>
+  
+  <a href="/watch/<%= top[i].slug %>?ep=1">
+    <div class="movie-card">
+
+        <div class="card-head">
+          <div style="position: absolute; margin-left: 4px; margin-top:4px; background-color: rgb(224, 165, 0); padding:4px; border-radius:5px; font-size: 0.8rem; font-weight: 500; color: rgb(27, 0, 84); ">
+            <p>HD vietsub</p>
+          </div>
+          <% if (typeof thumbnail[i] == 'object' && thumbnail[i]) { %>
+            <img src="https://image.tmdb.org/t/p/original/<%= thumbnail[i].poster_path %>" alt="" class="card-img"  >
+            <% } else { %>
+              <img src="<%= top[i].thumb_url %>" alt="" class="card-img"  >
+              <% } %>
+            
+          <div class="card-overlay">
+          
+            <div class="bookmark">
+              <ion-icon name="bookmark-outline"></ion-icon>
+            </div>
+
+            <div class="rating">
+              <ion-icon name="star-outline"></ion-icon>
+              <span>6.4</span>
+            </div>
+
+            <div class="play">
+              <ion-icon name="play-circle-outline"></ion-icon>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="card-body">
+          <h3 class="card-title"><%= top[i].name %></h3>
+
+          <div class="card-info">
+            <span class="genre">Action/Comedy</span>
+            <span class="year"><%= top[i].year %></span>
+          </div>
+        </div>
+
+      </div>
+  </a>  
+  <% } %>
+       
+
+          
+
+          
+
+        
+
+        </div>
+
+        <!--
+          - load more button
+        -->
+        <button class="load-more">LOAD MORE</button>
+
+      </section>
+
+
+
+
+
+      <!--
+        - #CATEGORY SECTION
+      -->
+   
+
+        
+
+
+
+
+
+      <!--  -->
+
+    </main>
+
+
+
+
+
+  
+
+  </div>
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/main.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  
+
+

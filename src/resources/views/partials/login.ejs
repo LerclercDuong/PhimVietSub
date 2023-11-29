@@ -1,0 +1,162 @@
+
+
+
+
+<div id="form">
+<H1 style="text-align:center; padding-top: 17px ;" class="font"> LOGIN</H1>
+<form action="/login" method="post" class="setting">
+
+    <input type="text" placeholder="Account" name="account" class="ip font2"> <br>
+    <input type="password" placeholder="Password" name="password" class="ip font2"><br><br>
+    <a href="" class="ip" style="color: rgb(10, 112, 255); text-decoration: none; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Forgot Password ?</a>
+    <button class="ip button" style="padding-bottom:1rem ; letter-spacing: 2px;" type="submit" >Login</button>
+
+</form>
+
+<div class="google-btn">
+    <div class="google-icon-wrapper">
+      <img class="google-icon-svg" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+    </div>
+    <p class="btn-text"><b>Sign in with Google</b></p>
+  </div>
+</div>
+
+<style>
+    .button:hover {
+        background-color: rgb(255, 255, 255) !important;
+        cursor:grab;
+        color:  rgb(10, 112, 255);
+    }
+    .button{
+        background-color: rgb(42, 118, 218);
+        color: aliceblue;
+        font-weight: bold;
+        border: none;
+        height:2.2rem;
+        
+    }
+    .setting{
+    margin-top:2rem;
+        
+         
+         
+    }
+    .ip{
+        margin: 0 2rem;
+        align-items:center ;
+        width:84%;
+        font-size:1rem;
+        padding: 0.7rem 0.5rem;
+        margin-top: 1rem;
+        box-sizing: border-box;
+        /* border: 1px solid rgb(0, 157, 255); */
+        border-radius: 0.9rem;
+        border: none;
+    }
+    .font{
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        letter-spacing: 2px;
+    }
+     #form {
+        background-color: rgb(231, 231, 231);
+        width: 25rem;
+        margin: auto;
+    
+        border-radius: 10px;
+        height: 30rem;
+     }
+
+     .google-btn {
+    margin: 4rem auto;
+    width: 100%;
+    min-width: 184px;
+    max-width: 250px;
+    height: 50px;
+    background-color: #f0f0f0;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px 0px  rgba(0, 0, 0, .2);
+    cursor: pointer;
+    cursor: hand;
+    align-self: center;
+    user-select: none;
+    transition: all 400ms ease 0s;
+    display: flex;
+    border-radius: 10px;
+}
+.google-btn .google-icon-wrapper {
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 1px;
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+    user-select: none
+}
+.google-btn .google-icon-svg {
+    position: absolute;
+    margin-top: 11px;
+    margin-left: 10px;
+    width: 23px;
+    height: 23px;
+    user-select: none;
+}
+.google-btn .btn-text {
+    float: right;
+    margin: 11px 14px 40px 45px;
+    color: #4e4e4e;
+    font-size: 1.3rem;
+    letter-spacing: .2px;
+    font-family: Roboto;
+    user-select: none
+}
+.google-btn:hover {
+    box-shadow: 0 3px 8px rgba(117, 117, 117, .5);
+    user-select: none
+}
+.google-btn:active {
+    box-shadow: 0 1px 1px #757575;
+    background: #F8F8F8;
+    color: #fff;
+    user-select: none
+}
+
+.normal-btn {
+    margin: 25px;
+    width: auto;
+    display: inline-block;
+    min-width: auto;
+    max-width: 184px;
+    height: 42px;
+    background-color: #fcfcfc;
+    border-radius: 2px;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .2);
+    cursor: pointer;
+    cursor: hand;
+    align-self: center;-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: all 400ms ease 0s
+}
+.normal-btn .btn-text {
+    float: left;
+    margin: 11px 14px 11px 14px;
+    color: #525252;
+    font-size: 17px;
+    letter-spacing: .2px;
+    font-family: Roboto;
+    user-select: none
+}
+.normal-btn:hover {
+    box-shadow: 0 3px 8px rgba(117, 117, 117, .5);
+    user-select: none
+}
+.normal-btn:active {
+    box-shadow: 0 1px 1px #757575;
+    background: #F8F8F8;
+    color: #fff;
+    user-select: none
+}
+</style>
